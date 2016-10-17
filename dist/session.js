@@ -160,7 +160,7 @@ session.delimiter = function (str) {
   if (str === undefined) {
     return this._delimiter;
   }
-  this._delimiter = String(str).trim();
+  this._delimiter = String(str).trim() + ' ';
   if (this.isLocal()) {
     this.parent.ui.refresh();
   } else {
